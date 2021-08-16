@@ -1,0 +1,30 @@
+const arr=[{
+    title:"Full Stack Webdeveloper",
+  type:"Full Time",
+  companyName:"Google",
+  companyUrl:"jdnffnekfn",
+  location:"Remote",
+  link:"jncsdlnodsn",
+  description:"sjfniodsnf",
+  skills:["ReactJS","MongoDB","NodeJS"],
+},{
+    title:"Backend Webdeveloper",
+  type:"Full Time",
+  companyName:"Microsoft",
+  companyUrl:"jdnffnekfn",
+  location:"Remote",
+  link:"jncsdlnodsn",
+  description:"sjfniodsnf",
+  skills:["MongoDB","Django"],
+},
+{
+  title:"Analyst",
+  type:"Full Time",
+  companyName:"Goldman Sachs",
+  companyUrl:"jdnffnekfn",
+  location:"Remote",
+  link:"jncsdlnodsn",
+  description:"sjfniodsnf",
+  skills:["Python","Django","Docker","Tensor flow"],
+}]
+export default arr;
