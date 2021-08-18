@@ -2,6 +2,7 @@ import React,{useState} from 'react';
 import Navbar from './components/navbar';
 import Newjob from './components/newjob';
 import Jobcard from './components/jobcard';
+import ProfileCard from './components/profileCard';
 import { makeStyles } from '@material-ui/core/styles';
 import {Container,Grid,Typography} from '@material-ui/core';
 import Arr from './components/array';
@@ -15,18 +16,26 @@ const useStyles=makeStyles((theme)=>{
 function App() {
 
  const [postjob,setpostjob]=useState(false);
+ const [login,setLogin] = useState(false);
  const [jobs, setJobs] = useState(Arr);
  const handlechange = () =>{
-   if(postjob==false)
+   if(postjob===false)
    setpostjob(true);
    else
    setpostjob(false);
  }
+
+ function handleLoginClick(){
+   if(login===false)setLogin(true);
+   else setLogin(false);
+ }
+
  const classes=useStyles();
   return (
     <div>
-    <Navbar handlechange={handlechange}/>
-    <Newjob post={postjob} handlechange={handlechange}/>
+    <Navbar handlechange={handlechange} handleclick = {handleLoginClick}/>
+    <Newjob post={postjob} handlechange={handlechange}  />
+    <ProfileCard lgn={login} handleclick = {handleLoginClick} />
     <div className={classes.toolbar}></div>
     <Container>
     <Typography variant="h2">

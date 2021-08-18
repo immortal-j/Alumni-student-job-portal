@@ -11,7 +11,6 @@ const useStyles = makeStyles((theme) => ({
   nav:{
    backgroundColor:"black",
    margin: 0,
-   
   },
   root: {
     flexGrow: 1,
@@ -40,9 +39,9 @@ export default function ButtonAppBar(props) {
       <AppBar className={classes.nav}>
         <Toolbar>
           <IconButton edge="start" className={classes.menuButton} aria-label="menu">
-            <Menu/>
+            <Menu  handleClick={props.handleclick} />
           </IconButton>
-          <Typography variant="h6" className={classes.title}>
+          <Typography variant="h6" className={classes.title} > 
             Alumni
           </Typography>
           <Button className={classes.btn} variant="contained" onClick={props.handlechange}>Post a Job</Button>
